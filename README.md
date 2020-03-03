@@ -59,6 +59,7 @@
     - On any of the two listings (the original, or the one transformed by map), apply a reduce that calculates the number of points. With this value, use jQuery to update the corresponding field within the DOM.
     
     ![](/BLUEPRINTS_PART1/img/11.PNG)
+    
     ![](/BLUEPRINTS_PART1/img/12.PNG)
     
 - Associate the previously created operation (that of app.js) with the on-click event of the page query button.
@@ -67,6 +68,14 @@
 
 - Verify the operation of the application. Start the server, open the HTML5/JavaScript application, and rectify that when entering an existing user, the list of the same is loaded.
 
+Buscando JhonConnor:
+
 ![](/BLUEPRINTS_PART1/img/14.PNG)
+
+Buscando LexLuthor:
+
 ![](/BLUEPRINTS_PART1/img/15.PNG)
+
+Buscando LexLu (Que no existe):
+
 ![](/BLUEPRINTS_PART1/img/16.PNG)
