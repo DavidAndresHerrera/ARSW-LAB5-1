@@ -1,6 +1,7 @@
 var app =(function(){
 
     var author=null;
+    var plane =null;
     var lista = [];
 
     var total = function(total, valor){
@@ -22,18 +23,39 @@ var app =(function(){
         var lista  = retorno.map(function(BP){
             return {key:BP.name, value:BP.points.length}
         })
+        var i = 0;
         lista.map(function(BP){
-            var fila = '<tr><td id="bpName">' + BP.key + '</td><td id="point">'+BP.value+'</td><td><button type="button" class="btn btn-success" onclick="">Open</button></td></tr>';
+            var fila = "<tr><td id=\"bpName"+i+"\">" + BP.key + "</td><td id='point'>"+BP.value+"</td><td><button type=\"button\" class=\"btn btn-success\" onclick=\"app.draw("+i+")\">Open</button></td></tr>";
             $("#t01 tbody").append(fila);
+            i+=1;
         })
         var suma = lista.reduce(total,0);
         $( "#totalPoints" ).html("Total Points: "+suma);
     }
 
+    var dibujar = function (data) {
+        var canvas = $('#myCanvas');
+        var ctx = canvas[0].getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(data.points[0].x, data.points[0].y);
+        data.points.forEach(function (point) {
+            ctx.lineTo(point.x, point.y);
+        })
+        ctx.stroke();
+    };
+
+
+
     return {
          update: function(author){
             setName(author);
             apimock.getBlueprintsByAuthor(author,setLista);
+         },
+
+         draw: function(i){
+            var name = document.getElementById("bpName"+i).innerText ;
+            $( "#currentBluePrint" ).html("Current BluePrint :"+ name);
+            apimock.getBlueprintsByNameAndAuthor(name,author,dibujar);
          }
 	};
 })();
