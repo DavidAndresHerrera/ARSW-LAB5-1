@@ -1,3 +1,4 @@
+var apiRest = apimock;
 var app =(function(){
 
     var author=null;
