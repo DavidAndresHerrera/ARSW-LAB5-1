@@ -79,3 +79,32 @@ Buscando LexLuthor:
 Buscando LexLu (Que no existe):
 
 ![](/BLUEPRINTS_PART1/img/16.PNG)
+
+### Next Week
+
+- To the page, add an element of type Canvas, with its respective identifier. Make your dimensions not too large to make room for the other components, but enough to be able to draw the plans.
+
+![](/BLUEPRINTS_PART1/img/17.jpg)
+
+- To the app.js module add an operation that, given the name of an author, and the name of one of its planes given as parameters, using the getBlueprintsByNameAndAuthor method of apimock.js and a callback function:
+    - Consult the points of the corresponding plane, and with them, draw straight line segments, using the available HTML5 elements (Canvas, 2DContext, etc.)Update the field with jQuery where the name of the plane being drawn is shown (if that field does not exist, group it to the DOM).
+    
+    ![](/BLUEPRINTS_PART1/img/18.jpg)
+
+- Verify that the application now, in addition to displaying the list of the plans of an author, allows you to select one of these and graph it. To do this, have the button generated with the click event associated with the operation done in the last column (sending the corresponding names as a parameter).
+
+![](/BLUEPRINTS_PART1/img/20.jpg)
+
+- Verify that the application now allows: consult the plans of an author and graph the one selected.
+
+![](/BLUEPRINTS_PART1/img/19.jpg)
+
+- Once the application works (front-end only), make a module (call it apiclient) that has the same operations of the apimock, but for the same use real data consulted from the REST API. For the above, review how to make GET requests with jQuery, and how the callback scheme is handled in this context.
+
+Importando el módulo a HTML:
+
+![](/BLUEPRINTS_PART1/img/22.jpg)
+
+Módulo:
+
+![](/BLUEPRINTS_PART1/img/21.jpg)
