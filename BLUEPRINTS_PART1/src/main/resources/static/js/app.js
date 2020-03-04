@@ -1,7 +1,9 @@
+var apiRe=apiclient ;
 var app =(function(){
     var author=null;
     var plane =null;
     var lista = [];
+
 
     var total = function(total, valor){
             return total + valor.value;
@@ -48,13 +50,13 @@ var app =(function(){
     return {
          update: function(author){
             setName(author);
-            apimock.getBlueprintsByAuthor(author,setLista);
+            apiRe.getBlueprintsByAuthor(author,setLista);
          },
 
          draw: function(i){
             var name = document.getElementById("bpName"+i).innerText ;
             $( "#currentBluePrint" ).html("Current BluePrint :"+ name);
-            apimock.getBlueprintsByNameAndAuthor(name,author,dibujar);
+            apiRe.getBlueprintsByNameAndAuthor(author,name,dibujar);
          }
 	};
 })();
