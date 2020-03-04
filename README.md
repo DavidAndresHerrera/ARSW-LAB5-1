@@ -111,7 +111,7 @@ Buscando LexLu (Que no existe):
 
 - Modify the app.js code so that it is possible to switch between the apimock and the apiclient with just one line of code:
 
-![](/BLUEPRINTS_PART1/img/oneline.jpg)
+![](/BLUEPRINTS_PART1/img/oneline{.jpg)
 
 - En este caso si se cambia por apimock realizará todas las funcionalidades con los datos de apimock, para este caso se puso apicliente para que toda la funcionalidad de creacion de la tabla y los dibujos se realice con los datos del apiclient.
 
